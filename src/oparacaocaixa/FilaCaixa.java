@@ -10,12 +10,16 @@ import java.util.List;
 
 /**
  *
- * @author Darci
+ * @author Vinicius
  */
 public class FilaCaixa {
-    private List<Cliente>filaClientes = new ArrayList<Cliente>();
-    private List<Cliente>filaClientesIdosos = new ArrayList<Cliente>();
-    private List<Cliente>Caixas = new ArrayList<Cliente>();
+    private List<Cliente> filaClientes = new ArrayList<Cliente>();
+
+    public List<Cliente> getCaixas() {
+        return Caixas;
+    }
+    private List<Cliente> filaClientesIdosos = new ArrayList<Cliente>();
+    private List<Cliente> Caixas = new ArrayList<Cliente>();
     
     
     public void addClienteFila(Cliente c){

@@ -7,7 +7,7 @@ package oparacaocaixa;
 
 /**
  *
- * @author Darci
+ * @author Vinicius
  */
 public class Cliente {
 

@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Darci
+ * @author Vinicius
  */
 public class OparacaoCaixa {
 
@@ -25,29 +25,39 @@ public class OparacaoCaixa {
       
         
         while(x!=-1){
-              System.out.println("1 - Adicionar Cliente a Fila de espera");
+            
+        System.out.println("1 - Adicionar Cliente a Fila de espera");
         System.out.println("2 - Proximo Cliente do Caixa");
         System.out.println("3 - liberar caixa");
         System.out.println("4 - sair");
+        
               x = scan.nextInt();
       
         
             switch(x){
             
             case 1 :
+                
+                System.out.println("Digite o nOme do Cliente");
                 String nomeCliente = scan.nextLine();
                
+                
                         nomeCliente = scan.next();
-                int idade = scan.nextInt();
+                
+                        System.out.println("Digite a Idade do Cliente");
+                        int idade = scan.nextInt();
                 
                 Cliente cli = new Cliente(idade,nomeCliente);
                 fc.addClienteFila(cli);
                 System.out.println("Cliente adicionado a fila de espera aguandando ser chamado !");
                 break;
             case 2:
+                if(fc.getCaixas().size()>0){
                 fc.proxClienteCaixa();
                 System.out.println("Cliente foi chamado para o caixa ! veja abaixo os clientes em atendimento");
-                
+                }else{
+                    System.out.println("nao tem clientes em atendimento");
+                }
               
               
                 fc.mostrarClienteEmAtendimento();
